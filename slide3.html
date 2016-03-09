@@ -1,0 +1,86 @@
+<html>
+  <head>
+  <title>Slide</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+  <style>
+
+   html, body {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: auto;
+
+
+   }
+   .bloco {
+      position: relative;
+   }
+   .slide {
+      width: 100%;
+      height: auto;
+      position: absolute;      
+   }
+   .slide img {
+      width: 100%;
+   }
+  .miniatura {
+      position:absolute;
+      width: 500px;
+      top: 50px;
+      right: 70px;
+      z-index: 1;
+      display: inline-block;
+      
+  }
+  .miniatura img {
+      width: 100%;
+      height: auto;
+
+  }
+  .miniatura div {
+    margin-left: 10px;
+  }
+ 
+
+
+  </style>  
+
+  </head>
+  <body>
+  
+  <div class="bloco">
+    <div class="slide">
+      <div><img src="img/slide1.jpg" alt=""></div>
+      <div><img src="img/slide2.jpg" alt=""></div>
+      <div><img src="img/slide3.jpg" alt=""></div>
+    </div>
+    <div class="miniatura">
+      <div><img src="img/slide1.jpg" alt=""></div>
+      <div><img src="img/slide2.jpg" alt=""></div>
+      <div><img src="img/slide3.jpg" alt=""></div>
+    </div>
+  
+
+  
+  
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+
+
+  <script type="text/javascript">
+  $('.slide').slick({
+    adaptiveHeight: true
+  });
+  $('.miniatura').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slide',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true
+});
+  </script>
+
+  </body>
+</html>
